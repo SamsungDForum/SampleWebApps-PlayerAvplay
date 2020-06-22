@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('../assets/RobotoMono-Regular.ttf');
+}
+
+#av-player {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#av-player.fullscreenMode {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 1;
+}
+
+.buttons.fullscreenMode {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-top: none;
+    z-index: 1;
+}
+
+.time {
+    position: absolute;
+    top: 11vh;
+    right: 31vw;
+    color: #fff;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-size: 36px;
+    font-family: 'RobotoMono', monospace;
+}
+
+.time.fullscreenMode {
+    top: 1vh;
+    right: 1vw;
+    z-index: 1;
+}

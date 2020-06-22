@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../assets/JosefinSans-Light.ttf');
+}
+
+body,
+h1,
+h2,
+header,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+    color: #000;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.main-header {
+    width: 100vw;
+    height: 97px;
+    padding: 0.7vmax;
+    box-sizing: border-box;
+    border: 1px solid rgb(215, 201, 201);
+    color: #1428a0;
+    line-height: 6.1vmin;
+}
+
+.main-header .appName {
+    float: left;
+    margin-right: 50px;
+    font-size: 2vmax;
+}
+
+.main-header .appVersion {
+    float: left;
+}
+
+.main-header .tvInfo {
+    float: right;
+    height: 100%;
+}
+
+.main-header .tvInfo p {
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    line-height: 2vmax;
+}
+
+.logsContainer {
+    height: 96%;
+    padding-left: 10px;
+    margin-top: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.logsContainer.active {
+    margin-top: 2px;
+    box-shadow: 0 0 5px rgba(20, 40, 160, 1);
+    border: 1px solid rgba(20, 40, 160, 1);
+    padding-left: 9px;
+}
+
+.logs {
+    position: absolute;
+    top: 97px;
+    right: 0;
+    width: 30vw;
+    height: 982px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px solid rgb(215, 201, 201);
+    border-top: none;
+}
+
+.logs p {
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid rgb(215, 201, 201);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.logs p.error {
+    color: #f00;
+}
+
+.logs p.warn {
+    color: #0c0;
+}
+
+.logs h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.main {
+    top: 9vh;
+    width: 70vw;
+    height: 80vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+.buttons {
+    display: -webkit-flex;
+    position: absolute;
+    top: 961px;
+    align-items: center;
+    justify-content: space-around;
+    width: 70vw;
+    height: 119px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(215, 201, 201);
+}
+
+button {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #1428a0;
+    border-radius: 6px;
+    color: #1428a0;
+    font-family: inherit;
+    font-size: 1.3vmax;
+    transition: 200ms all ease-in;
+}
+
+button.selected {
+    background-color: #5f70cf;
+    color: #fff;
+}
+
+button:hover,
+button.active,
+button:focus {
+    background-color: #1428a0;
+    color: #fff;
+    outline: 0;
+}
+
+.info {
+    display: -webkit-flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 550px;
+    margin: auto;
+    transition: 200ms all ease-in;
+    z-index: 1;
+}
+
+.info-container {
+    width: 100%;
+    background-color: rgb(241, 234, 234);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.23), 0 0 6px rgba(0, 0, 0, 0.45);
+}
+
+.info h2 {
+    padding: 16px 16px 0 16px;
+}
+
+.info p {
+    padding: 0 16px 16px 16px;
+}
+
+.info.hidden {
+    right: -600px;
+}
